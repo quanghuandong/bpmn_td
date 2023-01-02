@@ -1,6 +1,8 @@
 Source files of the prototypical tool BPMN+TD to model selected aspects of Technical Debt with BPMN introduced in the paper:\
 Dong, Q. H., and Vogel-Heuser, B. (2021). Modelling technical compromises in electronics manufacturing with BPMN+TD – an industrial use case. IFAC-PapersOnLine: 17th IFAC Symposium on Information Control Problems in Manufacturing (INCOM), 54(1), pp. 912-917. Springer. https://doi.org/10.1016/j.ifacol.2021.08.108
-Status: Archive (code is provided as-is, no updates expected)
+\
+\
+_Status: Archive (code is provided as-is, no updates expected)
 
 
 # Prototypical tool BPMN+TD
