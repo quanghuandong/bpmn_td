@@ -30,4 +30,4 @@ Eclipse Public License 2.0
 # Contact
 
 Quang Huan Dong - huan.dong@tum.de\
-Technical University of Munich - Institute of Automation and Information Systems https://www.mw.tum.de/en/ais/homepage/
+Technical University of Munich - Institute of Automation and Information Systems https://www.mec.ed.tum.de/en/ais/homepage/
