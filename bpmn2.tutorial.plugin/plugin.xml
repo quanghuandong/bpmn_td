@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension
+         point="org.eclipse.bpmn2.modeler.runtime">
+      <runtime
+            class="bpmn2.tutorial.ImixsRuntimeExtension"
+            description="Imixs-Workflow BPMN Runtime Extension"
+            id="bpmn2.tutorial.runtime"
+            name="BPMN-Tutorial">
+      </runtime>
+      <model
+            resourceFactory="bpmn2.tutorial.model.util.ModelResourceFactoryImpl"
+            runtimeId="bpmn2.tutorial.runtime"
+            uri="http://bpmn2.tutorial.org/bpmn2">
+      </model>
+     
+    
+      <customTask
+            category="Extension for TD"
+            description="Technical Debt: a compromise is made despite better knowledge"
+            featureContainer="bpmn2.tutorial.ImixsFeatureContainerTask"
+            icon="process-bubble.png"
+            id="bpmn2.tutorial.ProcessEntityTask"
+            name="Technical Debt Task"
+            propertyTabs="bpmn2.tutorial.propertytab.task.workflow"
+            runtimeId="bpmn2.tutorial.runtime"
+            type="Task">
+         
+         <property
+               description="Technical Debt Task ID"
+               label="TechnicalDebtID"
+               name="TechnicalDebtID"
+               type="EInt"
+               value="0">
+         </property>
+                  
+      </customTask>
+     
+     
+      <!-- Process Tabs -->
+      <propertyTab
+         class="bpmn2.tutorial.ui.task.ProcessWorkflowPropertySection"
+         id="bpmn2.tutorial.propertytab.task.workflow"
+         label="Workflow"
+         replaceTab="org.eclipse.bpmn2.modeler.task.tab"
+         runtimeId="bpmn2.tutorial.runtime"
+         type="org.eclipse.bpmn2.Task">
+      </propertyTab>
+      
+       <!--
+      <customTask
+            category="Extension for TD"
+            description="represent an Technical Debt data object"
+            featureContainer="bpmn2.tutorial.ImixsFeatureContainerDataObject"
+            icon="td-doc.png"
+            id="bpmn2.tutorial.TechnicalDebtDataObject"
+            name="Technical Debt Data Object"
+            runtimeId="bpmn2.tutorial.runtime"
+            type="Task">
+         <property name="type" value="MyTask" />
+         <property
+               description="Technical Debt Data Object ID"
+               label="ID"
+               name="TechnicalDebtDataObjectID"
+               type="EInt"
+               value="0">
+         </property>
+      </customTask>
+      
+      <customTask
+            category="Extension for TD"
+            description="represent an Technical Debt data object"
+            featureContainer="bpmn2.tutorial.MyFeatureContainerDataObject"
+            icon="td-doc.png"
+            id="bpmn2.tutorial.TechnicalDebtDataObject2"
+            name="Technical Debt Data Object 2"
+            runtimeId="bpmn2.tutorial.runtime"
+            type="DataObject">
+         <property
+               name="type"
+               value="MyDataObject">
+         </property>
+      </customTask>
+      <customTask
+            category="Extension for TD"
+            description="my boundary event description"
+            featureContainer="bpmn2.tutorial.MyBoundaryEventFeatureContainer"
+            icon="MyBoundaryEvent.png"
+            id="bpmn2.tutorial.MyBoundaryEvent"
+            name="My Boundary Event"
+            runtimeId="bpmn2.tutorial.runtime"
+            type="BoundaryEvent">
+         <property
+               name="type"
+               value="MyBoundaryEvent">
+         </property>
+         <property
+               name="isEnabled2"
+               type="EBoolean"
+               value="true">
+         </property>
+      </customTask>
+      <customTask
+            category="Extension for TD"
+            description="My Data Object description"
+            featureContainer="bpmn2.tutorial.MyDataObjectFeatureContainer2"
+            icon="MyBoundaryEvent.png"
+            id="bpmn2.tutorial.MyDataObject2"
+            name="My Data Object"
+            runtimeId="bpmn2.tutorial.runtime"
+            type="DataObject">
+         <property
+               name="type"
+               value="MyDataObject">
+         </property>
+         <property
+               name="isEnabled22"
+               type="EBoolean"
+               value="true">
+         </property>
+      </customTask>
+      -->
+      
+      <customTask
+            category="Extension for TD"
+            description="This artifact represents the technical debt that can occur in the connected task."
+            featureContainer="bpmn2.tutorial.SampleCustomTaskFeatureContainer"
+            icon="td-item.png"
+            id="bpmn2.tutorial.technicaldebtitem"
+            name="Technical Debt Item"
+            runtimeId="bpmn2.tutorial.runtime"
+            type="TextAnnotation">
+         <property
+               name="text"
+               type="EString"
+               value="Technical Debt Item">
+         </property>
+         <property
+               name="name"
+               type="EString"
+               value="Technical Debt Item">
+         </property>
+         <property
+               name="evaluate"
+               type="EBoolean"
+               value="false">
+         </property>
+         <property
+               description="Potential cost of this"
+               name="cost"
+               type="EInt"
+               value="0">
+         </property>
+         <property
+               description="Technical Debt Item ID"
+               label="Technical Debt Item ID"
+               name="TechnicalDebtItemID"
+               type="EInt"
+               value="0">
+         </property>
+      </customTask>
+      <modelExtension
+            id="bpmn2.tutorial.plugin.modelExtension1"
+            type="bpmn2.tutorial.plugin.modelExtension1">
+         <property
+               name="type"
+               value="MyModelExtension">
+         </property>
+      </modelExtension>
+      
+   
+	
+   </extension>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated imixs -->
+      <package
+            uri="http://bpmn2.tutorial.org/bpmn2"
+            class="bpmn2.tutorial.model.ModelPackage"
+            genModel="model/imixs.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated imixs -->
+      <parser
+            type="bpmn"
+            class="bpmn2.tutorial.model.util.ModelResourceFactoryImpl"/>
+   </extension>
+</plugin>
