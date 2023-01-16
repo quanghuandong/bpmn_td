@@ -28,6 +28,7 @@ The presented model in the paper is provided in the Project2 folder.
 
 # License
 
+According to Eclipse guidelines (https://www.eclipse.org/legal/noncodelicenses.php), code example, build scripts and other content of Eclipse projects follow
 Eclipse Public License 2.0
 
 
