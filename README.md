@@ -8,8 +8,8 @@ _Status: Archive (code is provided as-is, no updates expected)
 # Prototypical tool BPMN+TD
 
 The code is based on the developer tutorials to extend Eclipse BPMN2 Modeler:
-- BPMN2-Modeler/DeveloperTutorial https://github.com/rsoika/bpmn2-tutorial/
 - Eclipse BPMN2 Wiki pages https://wiki.eclipse.org/BPMN2-Modeler/DeveloperTutorials
+- BPMN2-Modeler/DeveloperTutorial https://github.com/rsoika/bpmn2-tutorial/
 
 Two custom elements are supported in BPMN+TD, namely TechnicalDebtTask inheriting from Task element and TechnicalDebtItem inheriting from TextAnnotation element.
 
